@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+body {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: rgb(152, 155);
+  }
+  
+  .container-padding50 {
+    padding-top: 50px;
+  }
+  
+  .container-textinput {
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    width: 80%;
+    display: inline-block;
+    padding: 20px;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(152, 155);
+    color: black;
+    border: 1px solid rgb(55, 90, 92);
+  }
+  
+  .container-textinput:hover {
+    box-shadow: 0 14px 28px 0 rgb(0 0 0 / 20%), 0 9px 74px 0 rgb(0, 0, 0);
+    border: none;
+  }
+  
+  .container-button {
+    width: 157px;
+    display: inline-block;
+    padding: 20px;
+    background-color: rgb(152, 155);
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    border: none;
+    border-radius: 40px;
+    color: black;
+    border: 1px solid rgb(55, 90, 92);
+  }
+  
+  .container-button:hover {
+    box-shadow: 0 14px 28px 0 rgb(0 0 0 / 10%), 0 9px 64px 0 rgb(0, 0, 0);
+    border: none;
+  }
+  
+  .container-image {
+    width: 30%;
+    display: blue;
+    outline: none;
+    float: left;
+    margin-right: 3%;
+  }
+  
+  
