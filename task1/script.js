@@ -22,7 +22,7 @@ const getName = (item) => {
     const url =
         "https://api.giphy.com/v1/gifs/search?q=" +
         query +
-        "&api_key=b11HdOMgaljN360FcyhSLpDQ4plP203S";
+        "&api_key=b11HdOMgaljN360FcyhSLpDQ4plP203S&limit=5";
 
     // AJAX Request
     const GiphyAJAXCall = new XMLHttpRequest();
