@@ -15,7 +15,9 @@ document.querySelector('select').addEventListener('change', function () {
     prototype.bride = (this).value;
 
 });
-add.addEventListener('click', () => {
+add.addEventListener('click', (e) => {
+    e.preventDefault();
+    const form = document.querySelector('form').value;
     const catName = document.getElementById('petName').value;
     const radiobutton = document.querySelectorAll('input[name="gender"]');
     const catYars = document.getElementById('catAge').value;
@@ -30,4 +32,17 @@ add.addEventListener('click', () => {
     }
 
     console.log(prototype);
-});
+
+    fetch("https://httpbin.org/post", {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+        })
+        .then(response => response.json())
+        .then(form => {
+            console.log(form);
+        })
+        .catch(error => console.log(error));
+})
