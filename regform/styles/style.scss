@@ -1,0 +1,135 @@
+$col1: #ffffff;
+$col2: #f0f0f0;
+$col3: #AE967F;
+$col4: #777777;
+$col5: #2ecc71;
+$col6: #e74c3c;
+$col7: #8A090A;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/regform/assets/images/novogodnii-fon3.jpg);
+    background-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: $col1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: $col3;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+}
+
+.header {
+    border-bottom: 1px solid $col2;
+    background-color: $col3;
+    padding: 20px 40px;
+
+    h2 {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.form {
+    padding: 30px 40px;
+
+    &-control {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            border: 2px solid $col2;
+            border-radius: 4px;
+            display: block;
+            font-family: inherit;
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+
+            &:focus {
+                outline: 0;
+                border-color: $col4;
+            }
+        }
+
+        &.success input {
+            border-color: $col5;
+        }
+
+        &.error input {
+            border-color: $col6;
+        }
+
+        i {
+            visibility: hidden;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+        }
+
+        &.success i.fa-check-circle {
+            color: $col5;
+            visibility: visible;
+        }
+
+        &.error i.fa-exclamation-circle {
+            color: $col6;
+            visibility: visible;
+        }
+
+        small {
+            color: $col6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+        }
+
+        &.error small {
+            visibility: visible;
+        }
+    }
+
+    button {
+        background-color: $col7;
+        border: 2px solid $col7;
+        border-radius: 4px;
+        color: $col1;
+        display: block;
+        font-family: inherit;
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    select {
+        width: 190px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+.container-color {
+    padding-top: 20px;
+}
