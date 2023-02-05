@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1076/1076928.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Конкурс для Котовладельцев</h1>
+        <h3>Заполните данную форму, и мы выбрем рандомным образом победителя</h3>
+        <p>Главный приз - фотосессия от наших партнеров и 5кг отборнейшего мяса или 10кг сухого корма!</p>
+        <img src="./assets/cat.jpg" alt="cat">
+
+        <form>
+            <fieldset>
+                <legend>Информация о Котовладельце</legend>
+                <p><label for="name">Имя</label>
+                    <input type="text" id="name" placeholder="Введите Ваше имя" required></p>
+
+                <p><label for="mail">Почта владельца</label>
+                    <input type="email" id="mail" placeholder="meow@gmail.com" required></p>
+
+                <p><label for="phone">Номер телефона владельца</label>
+                    <input type="tel" id="phone" placeholder=+7(xxx)xxx-xx-xx required pattern="\+?[0-9\s\-\(\)]+"
+                        minlength="10" maxlength="20" /></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Информация о Котейке</legend>
+                <p><label for="petname">Кличка питомца</label>
+                    <input type="text" id="petName" placeholder="Введите имя котика" required></p>
+
+                <p><label for="bridecat">Порода питомца</label>
+                    <select id="bride">
+                        <option value="british">британская коротошорстная</option>
+                        <option value="russian">русская голубая</option>
+                        <option value="persian">персидская</option>
+                        <option value="kanadian">канадский сфинкс</option>
+                        <option value="whithout">дворяночка</option>
+                        <option value="oriental">сиамская</option>
+                        <option value="schotish">шотландская вислоухая</option>
+                    </select></p>
+
+                    <p><label for="bridecat">Укажите пол Котейки</label></p>
+            <input type="radio" name="gender" id="gender" value="male"/> <span>Мальчик</span><br/>
+            <input type="radio" name="gender"  id="gender" value="female"/> <span>Девочка</span><br/>
+
+                    <p><label for="age">Сколько лет Вашему пушистику?</label>
+                        <input type="number" max=18 min=1 id="catAge" placeholder="" required></p>
+
+                    <p><label for="comment">Комментарий</label>
+                        <input type="text" id="about" placeholder="Напишите пару слов о своем котике" required></p>
+
+                    <button id="add">OK</button>
+        </form>
+        </fieldset>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

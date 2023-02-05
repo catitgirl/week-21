@@ -10,18 +10,23 @@ form.addEventListener('submit', e => {
     e.preventDefault();
 
     const passedChecks = checkInputs();
+    let user = {
+    login: document.getElementById('username').value,
+    mail: document.getElementById('email').value,
+    pass: document.getElementById('password').value
+    }
 fetch("https://httpbin.org/post",
 {
     method: 'POST',
-    body: JSON.stringify(passedChecks),
+    body: JSON.stringify(user),
     headers: {
         'Content-Type': 'application/json; charset=utf-8'
     
 },
 })
 .then(response => response.json())
-.then(passedChecks => {
-    console.log(passedChecks);
+.then(user => {
+    console.log(user);
 })
 .catch(error => console.log(error));
 })

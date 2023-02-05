@@ -1,0 +1,30 @@
+ body {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    justify-content: center;
+    background-color: #FFE4C4;
+}
+
+input:valid {
+    background-color: lightgreen;
+}
+#container {
+    width: 450px;
+   
+    background-color: #87CEEB;
+    color: rgb(45, 44, 46);
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 18px;
+}
+img {
+    width: 300px;
+    height: 300px;
+}
+
+#comment {
+    margin-top: 10px;
+ width: 350px;
+ height: 50px;
+}
